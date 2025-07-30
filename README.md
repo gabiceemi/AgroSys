@@ -4,14 +4,12 @@
 👨‍💻 Desenvolvedor: Gabriel Cordova Medeiros
 📧 Contato: gabiceemi@gmail.com
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 📦 COMO RODAR O PROJETO
 
 1. Clone ou baixe o repositório.
 2. Abra o arquivo `login.html` em qualquer navegador moderno (recomendo Google Chrome).
 3. Cadastre um novo usuário e faça login para acessar as demais telas.
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 📁 ESTRUTURA DO PROJETO
 
 - `login.html`: Tela inicial com login, cadastro de usuários e importação de banco de dados.
@@ -25,7 +23,6 @@
 - `assets/js/enderecos.js`: Cadastro e listagem de endereços, com validação de endereço principal.
 - `assets/`: (opcional) pasta para ícones, imagens etc.
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 🧠 FUNCIONALIDADES
 
 ✔ Cadastro e login de usuários com validação de duplicidade.
@@ -43,7 +40,6 @@
 ✔ Exportação do banco de dados completo no formato JSON clicando em **📤 Exportar banco** na tela de clientes.
 ✔ Mobile Friendly: interface adaptada para dispositivos móveis.
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 📁 EXEMPLO DE EXPORTAÇÃO (JSON)
 
 O banco exportado terá a seguinte estrutura:
@@ -56,12 +52,10 @@ O banco exportado terá a seguinte estrutura:
 }
 ````
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 📄 LICENÇA
 
 Este projeto é open-source e distribuído sob a licença MIT.
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 💬 CONTATO
 
 Desenvolvido por Gabriel Cordova Medeiros  
