@@ -1,0 +1,142 @@
+:root {
+  --primary-color: #00b7ce;
+  --background-color: #ffffff;
+  --text-color: #333;
+  --input-border-color: #ccc;
+  --button-hover-color: #0099aa;
+}
+
+/* ========= reset e full-screen flex ========= */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+body {
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--background-color);
+}
+
+/* ========= card ========= */
+.card {
+  width: 100%;
+  max-width: 400px;    /* largura máxima */
+  margin: 0 1rem;      /* folga lateral em telas pequenas */
+  padding: 2rem;
+}
+
+/* ========= full-width inputs e botões ========= */
+.form-control,
+.btn {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* dá um pouco mais de “peso” nos campos */
+.form-control {
+  padding: 0.75rem;
+  font-size: 1rem;
+}
+
+/* e nos botões também */
+.btn {
+  padding: 0.75rem;
+  font-size: 1rem;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  border: none;
+  border-radius: 12px;
+  background-color: #fff;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+}
+
+.card, .form-control, .btn {
+  transition: all 0.3s ease;
+}
+
+h1, h2, h3 {
+  color: var(--primary-color);
+  font-weight: 600;
+  text-align: center;
+}
+
+#login-form, #register-form {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.form-control {
+  border: 1px solid var(--input-border-color);
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 1rem;
+  transition: border-color 0.2s ease-in-out;
+}
+
+.form-control:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 0.2rem rgba(0, 183, 206, 0.25);
+}
+
+.btn-info {
+  background-color: var(--primary-color);
+  color: #fff;
+  border: none;
+  font-weight: bold;
+  padding: 10px;
+  font-size: 1rem;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.btn-info:hover {
+  background-color: var(--button-hover-color);
+  color: #fff;
+}
+
+.btn-outline-primary {
+  border-color: var(--primary-color);
+  color: var(--primary-color);
+  transition: all 0.2s ease-in-out;
+}
+
+.btn-outline-primary:hover {
+  background-color: var(--primary-color);
+  color: #fff;
+}
+
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+#register-container {
+  border-top: 1px solid #eee;
+  padding-top: 20px;
+}
+
+#config-btn {
+  border-color: var(--primary-color);
+  color: var(--primary-color);
+  padding: 6px 12px;
+  font-weight: 500;
+  border-radius: 6px;
+  font-size: 0.875rem;
+}
+
+#config-btn:hover {
+  background-color: var(--primary-color);
+  color: #fff;
+}

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" href="https://files.bewezy.com/849f3916a152d21ec6fbf2caacff1c8a/26102023164803000000591784.ico"
+    type="image/x-icon" />
+  <title>AgroSys</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Endereços — AgroSys</title>
+
+  <!-- 1) Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- 2) FontAwesome (ícones) -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+  <!-- 3) Seu CSS customizado para endereços (overrides se precisar) -->
+  <link rel="stylesheet" href="assets/css/enderecos.css" />
+</head>
+
+<body class="d-flex flex-column min-vh-100 bg-light">
+
+  <!-- ─── NAVBAR ─────────────────────────────────────────────────────────────────── -->
+  <nav class="navbar navbar-expand navbar-custom navbar-dark shadow-sm mb-4">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <img src="https://files.bewezy.com/thumbs/150/27/849f3916a152d21ec6fbf2caacff1c8a/2710202314370200000048541.svg"
+             alt="Agrosys - Agronegócios" height="27" width="150" />
+      </a>
+      <div>
+        <a class="btn btn-outline-primary" href="clientes.html">
+          <i class="fas fa-arrow-left me-1"></i> Clientes
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ─── CONTEÚDO PRINCIPAL ─────────────────────────────────────────────────────── -->
+  <main class="flex-grow-1">
+    <div class="container mb-5">
+      <div class="card shadow-sm">
+        <div class="card-header bg-info text-white">
+          <h1 class="h4 mb-0">Cadastro de Endereços</h1>
+        </div>
+        <div class="card-body">
+
+          <!-- ─── FORMULÁRIO ─────────────────────────────────────────────────────────── -->
+          <form id="endereco-form" class="row g-3 needs-validation" novalidate>
+
+            <!-- Cliente -->
+            <div class="col-12">
+              <label for="cliente_id" class="form-label">Cliente</label>
+              <select id="cliente_id" class="form-select" required>
+                <option value="">Selecione</option>
+              </select>
+              <div class="invalid-feedback">Selecione um cliente.</div>
+            </div>
+
+            <!-- CEP -->
+            <div class="col-md-4">
+              <input type="text" id="cep" class="form-control" placeholder="CEP" required />
+              <div class="invalid-feedback">Preencha o CEP.</div>
+            </div>
+            <div class="col-md-8"></div>
+
+            <!-- Rua / Número / Complemento -->
+            <div class="col-md-7">
+              <input type="text" id="rua" class="form-control" placeholder="Rua" required />
+              <div class="invalid-feedback">Preencha a rua.</div>
+            </div>
+            <div class="col-md-3">
+              <input type="text" id="numero" class="form-control" placeholder="Número" required />
+              <div class="invalid-feedback">Preencha o número.</div>
+            </div>
+            <div class="col-md-2">
+              <input type="text" id="complemento" class="form-control" placeholder="Complemento" />
+            </div>
+
+            <!-- Bairro / Cidade -->
+            <div class="col-md-6">
+              <input type="text" id="bairro" class="form-control" placeholder="Bairro" required />
+              <div class="invalid-feedback">Preencha o bairro.</div>
+            </div>
+            <div class="col-md-6">
+              <input type="text" id="cidade" class="form-control" placeholder="Cidade" required />
+              <div class="invalid-feedback">Preencha a cidade.</div>
+            </div>
+
+            <!-- Estado / País -->
+            <div class="col-md-6">
+              <input type="text" id="estado" class="form-control" placeholder="Estado" required />
+              <div class="invalid-feedback">Preencha o estado.</div>
+            </div>
+            <div class="col-md-6">
+              <input type="text" id="pais" class="form-control" value="Brasil" readonly />
+            </div>
+
+            <!-- Principal -->
+            <div class="col-12 form-check">
+              <input class="form-check-input" type="checkbox" id="principal" />
+              <label class="form-check-label" for="principal">
+                Marcar como endereço principal
+              </label>
+            </div>
+
+            <!-- Botões -->
+            <div class="col-12 d-flex align-items-center">
+              <button class="btn btn-info px-4" type="submit">
+                <i class="fas fa-map-marker-alt me-1"></i>
+                Cadastrar Endereço
+              </button>
+              <a href="clientes.html" class="btn btn-outline-secondary ms-3">
+                <i class="fas fa-arrow-left me-1"></i>
+                Voltar Clientes
+              </a>
+            </div>
+          </form>
+
+          <!-- ─── TABELA DE ENDEREÇOS ──────────────────────────────────────────── -->
+          <div class="table-responsive">
+            <h2 class="h5 mb-3 text-secondary">Endereços do Cliente</h2>
+            <table id="enderecos-tabela" class="table table-striped table-hover align-middle">
+              <thead class="table-light">
+                <tr>
+                  <th>Rua</th>
+                  <th>Bairro</th>
+                  <th>Cidade</th>
+                  <th>Estado</th>
+                  <th>País</th>
+                  <th>Principal?</th>
+                </tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- ─── FOOTER STICKY ─────────────────────────────────────────────────────────── -->
+  <footer class="bg-info text-white text-center py-2">
+    © 2025 AgroSys. Todos os direitos reservados.
+  </footer>
+
+  <!-- ─── SCRIPTS NA ORDEM CORRETA ─────────────────────────────────────────────── -->
+  <!-- SweetAlert2 (warn/erro) -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <!-- jQuery + Inputmask (máscaras) -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.8/jquery.inputmask.min.js"></script>
+  <!-- AlaSQL + persistência local -->
+  <script src="assets/js/alasql.min.js"></script>
+  <script src="assets/js/db.js"></script>
+  <!-- Utils (máscaras CPF/phone, se usar) -->
+  <script src="assets/js/utils.js"></script>
+  <!-- Lógica de endereços -->
+  <script src="assets/js/enderecos.js"></script>
+  <!-- Bootstrap Bundle (Popper + componentes) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
